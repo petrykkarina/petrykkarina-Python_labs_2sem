@@ -12,4 +12,4 @@ def max_wire_length(w, heights):
                 length = math.hypot(w, height2 - height1)
                 dp[i][h2] = max(dp[i][h2], dp[i - 1][h1] + length)
 
-    return round(max(dp[-1]), 2)
+    return max(dp[-1])
